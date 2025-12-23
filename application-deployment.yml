@@ -68,8 +68,8 @@ spec:
     kind: Deployment
     name: order-deployment
     apiVersion: apps/v1
-  minReplicas: 1
-  maxReplicas: 1
+  minReplicas: 2
+  maxReplicas: 4
   metrics:
     - type: Resource
       resource:
@@ -147,8 +147,8 @@ spec:
     kind: Deployment
     name: payment-deployment
     apiVersion: apps/v1
-  minReplicas: 1
-  maxReplicas: 1
+  minReplicas: 2
+  maxReplicas: 4
   metrics:
   - type: Resource
     resource:
@@ -226,8 +226,8 @@ spec:
     kind: Deployment
     name: restaurant-deployment
     apiVersion: apps/v1
-  minReplicas: 1
-  maxReplicas: 1
+  minReplicas: 2
+  maxReplicas: 4
   metrics:
     - type: Resource
       resource:
@@ -304,8 +304,8 @@ spec:
     kind: Deployment
     name: customer-deployment
     apiVersion: apps/v1
-  minReplicas: 1
-  maxReplicas: 1
+  minReplicas: 2
+  maxReplicas: 4
   metrics:
     - type: Resource
       resource:
