@@ -27,6 +27,10 @@ spec:
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
               value: "http://gke-confluent-kafka-cp-schema-registry:8081"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "admin"
           resources:
             limits:
               cpu: "500m"
@@ -102,6 +106,10 @@ spec:
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
               value: "http://gke-confluent-kafka-cp-schema-registry:8081"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "admin"
           resources:
             limits:
               cpu: "500m"
@@ -177,6 +185,10 @@ spec:
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
               value: "http://gke-confluent-kafka-cp-schema-registry:8081"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "admin"
           resources:
             limits:
               cpu: "500m"
@@ -251,6 +263,10 @@ spec:
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
               value: "http://gke-confluent-kafka-cp-schema-registry:8081"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "admin"
           resources:
             limits:
               cpu: "500m"
