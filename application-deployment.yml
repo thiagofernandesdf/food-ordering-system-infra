@@ -21,8 +21,8 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=order&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
-            - name: SPRING_DATASOURCE_INITIALIZATION-MODE
-              value: "never"
+            - name: SPRING_SQL_INIT_MODE
+              value: "always"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -68,8 +68,8 @@ spec:
     kind: Deployment
     name: order-deployment
     apiVersion: apps/v1
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 1
   metrics:
     - type: Resource
       resource:
@@ -100,8 +100,8 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=payment&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
-            - name: SPRING_DATASOURCE_INITIALIZATION-MODE
-              value: "never"
+            - name: SPRING_SQL_INIT_MODE
+              value: "always"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -147,8 +147,8 @@ spec:
     kind: Deployment
     name: payment-deployment
     apiVersion: apps/v1
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 1
   metrics:
   - type: Resource
     resource:
@@ -179,8 +179,8 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=restaurant&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
-            - name: SPRING_DATASOURCE_INITIALIZATION-MODE
-              value: "never"
+            - name: SPRING_SQL_INIT_MODE
+              value: "always"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -226,8 +226,8 @@ spec:
     kind: Deployment
     name: restaurant-deployment
     apiVersion: apps/v1
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 1
   metrics:
     - type: Resource
       resource:
@@ -257,8 +257,8 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:postgresql://postgres-service:5432/postgres?currentSchema=customer&binaryTransfer=true&reWriteBatchedInserts=true&stringtype=unspecified"
-            - name: SPRING_DATASOURCE_INITIALIZATION-MODE
-              value: "never"
+            - name: SPRING_SQL_INIT_MODE
+              value: "always"
             - name: KAFKA-CONFIG_BOOTSTRAP-SERVERS
               value: "gke-confluent-kafka-cp-kafka-headless:9092"
             - name: KAFKA-CONFIG_SCHEMA-REGISTRY-URL
@@ -304,8 +304,8 @@ spec:
     kind: Deployment
     name: customer-deployment
     apiVersion: apps/v1
-  minReplicas: 2
-  maxReplicas: 4
+  minReplicas: 1
+  maxReplicas: 1
   metrics:
     - type: Resource
       resource:
